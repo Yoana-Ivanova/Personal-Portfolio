@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- these 2 meta names below come form jQuery mmneu file -->
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Yoana Ivanova - Portfolio</title>
+
+		<!-- these 3 styles below come form jQuery mmneu file -->
+		<link type="text/css" rel="stylesheet" href="css/demo.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.dragopen.css" />
+		
+		<!-- Yoana style -->
+		<link type="text/css" rel="stylesheet" href="css/intropage.css" /> 
+		<link type="text/css" rel="stylesheet" href="css/firstpage.css" /> 
+		
+		<link type="text/css" rel="stylesheet" href="css/thirdpage.css" />
+
+		<!-- Shared assets - Start jQuery jcarousel-->
+        <link rel="stylesheet" type="text/css" href="css/style_jcarousel.css">
+
+        <!-- Example assets jcarousel - jQuery-->
+        <link rel="stylesheet" type="text/css" href="css/jcarousel.responsive.css">
+        <!-- End jQuery jcarousel-->
+		
+		<!-- for the one page layout -->
+		<!-- this style comes from jQuery mmneu file -->
+		<style type="text/css">
+			#intro
+			{
+				height: 400px;
+			}
+			#first
+			{
+				height: 650px;
+			}
+			#second
+			{
+				height: 400px;
+			}
+			#third
+			{
+				height: 400px;
+			}
+			#intro
+			{
+				padding-top: 0;
+			}
+			#first,
+			#second,
+			#third
+			{
+				border-top: 1px solid #ccc;
+				padding-top: 0;
+				padding-bottom: 10%;
+			}
+		</style>
+		
+		<!-- for the fixed header -->
+		<!-- this style comes from jQuery mmneu file -->
+		<style type="text/css">
+			.header,
+			.footer
+			{
+				box-sizing: border-box;
+				width: 100%;
+				position: fixed;
+			}
+			.header
+			{
+				top: 0;
+			}
+			.footer
+			{
+				bottom: 0;
+			}
+		</style>
+		
+		<!-- this 5 scripts below come from jQuery and jQuery mmneu file -->
+		
+		<script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.dragopen.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.fixedelements.min.js"></script>
+
+        <!-- Example assets jcarousel from jQuery - Start-->
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+
+        <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
+		
+		<!-- Example assets jcarousel End-->
+
+		<!-- Example that hide and view images applyed in page About - Start -->
+		<script type="text/javascript" src="js/hide_view_img.js"></script>
+		<!-- Example that hide and view images applyed in page About - End -->
+
+		<script type="text/javascript">
+			$(function() {
+				var $menu = $('nav#menu'),
+					$html = $('html, body');
+
+				$menu.mmenu({
+					dragOpen: true
+				});
+
+				var $anchor = false;
+				$menu.find( 'li > a' ).on(
+					'click',
+					function( e )
+					{
+						$anchor = $(this);
+					}
+				);
+
+				var api = $menu.data( 'mmenu' );
+				api.bind( 'closed',
+					function()
+					{
+						if ( $anchor )
+						{
+							var href = $anchor.attr( 'href' );
+							$anchor = false;
+
+							//	if the clicked link is linked to an anchor, scroll the page to that anchor 
+							if ( href.slice( 0, 1 ) == '#' )
+							{
+								$html.animate({
+									scrollTop: $( href ).offset().top
+								});	
+							}
+						}
+					}
+				);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="page">
+			<div class="header Fixed">
+				<a href="#menu"></a>
+				<img src="images/logo_pf.png" />
+			</div>
+			<div class="content" id="content">
+				<div id="intro">
+				<!-- Content is written by Yoana Ivanova -->
+				<main1 id="main1">
+					<containerintro id="cont1">
+						<p class="homecont"><a href="#first">about</a></p>
+					</containerintro>
+					
+					<containerintro id="cont1">
+						<p class="homecont"><a href="#second">work</a></p>
+					</containerintro>
+					
+					<containerintro id="cont1">
+						<p class="homecont"><a href="#third">contact</a></p>
+					</containerintro>
+				</main1>
+				<!-- End of Yoana Ivanova's content -->
+				</div>
+				<div id="first">
+				<!-- Content is written by Yoana Ivanova -->
+					
+					<main2 id="main2">
+						<containerfirst id="cont2">
+							<img src="images/pimg01.png" />
+						</containerfirst>
+						
+						<containerfirst id="cont2">
+							<img src="images/pimg02.png" />
+						</containerfirst>
+						
+						<containerfirst id="cont2">
+							<img src="images/pimg03.png" />
+						</containerfirst>
+					</main2>
+					<main2text id="main2text">
+						<h1 class="firstpagecont">Yoana V. Ivanova</h1>
+						<p class="firstpagecont">I am lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p class="firstpagecont"><a href="#">Download my CV</a>.</p>
+					</main2text>	
+				<!-- End of Yoana Ivanova's content -->									
+				</div>
+				
+				
+				<div id="second">
+				<!-- Content taken from jQuery - jcarousel -->
+							
+							<div class="wrapper">
+            					
+            					<h1>work</h1>
+            
+
+           						
+
+            						<div class="jcarousel-wrapper">
+                						<div class="jcarousel">
+						                    <ul>
+						                        <li><img src="images/600x400_slider_01.jpg" alt="Image 1" /></li>
+						                        <li><img src="images/600x400_slider_02.jpg" alt="Image 2" /></li>
+						                        <li><img src="images/600x400_slider_03.jpg" alt="Image 3" /></li>
+						                        <li><img src="images/600x400_slider_04.jpg" alt="Image 4" /></li>
+						                        <li><img src="images/600x400_slider_05.jpg" alt="Image 5" /></li>
+						                        
+						                    </ul>
+                						</div>
+
+						                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+						                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+						                <p class="jcarousel-pagination"></p>
+            						
+            						<!-- this button is added by Yoana-->
+
+										<a href="#"><button class="button-style" type="button">view all</button></a>
+            						</div>
+
+
+            						
+        					</div>
+		
+				<!-- End of jQuery content -->
+				</div>
+				
+				
+				<div id="third">
+				<!-- Satrt of Yoana Ivanova's content -->
+						
+						<main4text id="main4text">
+							<h1 class="thirdpagecont">contact</h1>
+							<p class="thirdpagecontpara">You can contact me via <textcontainer1 class="anchordecor">e-mail or <textcontainer2 class="textdecor">Facebook</textcontainer2> or <textcontainer2 class="textdecor">Behance</textcontainer2></textcontainer1>.</p>
+							<p class="thirdpagecontpara"><a class="anchordecor" href="mailto:yoana.v.ivanova@gmail.com">yoana.v.ivanova@gmail.com</a></p>
+						</main4text>
+						
+						<main4 id="main4">
+							<containerthird id="cont4">
+								<img src="images/behanceicon.png" />
+							</containerthird>
+							
+							<containerthird id="cont4">
+								<img src="images/facebookicon.png" />
+							</containerthird>
+							
+						</main4>
+										
+				<!-- End of Yoana Ivanova's content -->				
+				</div>
+			</div>
+			<!-- I have removed the Footre:
+			<div class="footer Fixed">
+				Fixed footer :-)
+			</div>
+			-->
+			<nav id="menu">
+				<ul>
+					<li><a href="#content">home</a></li>
+					<li><a href="#first">about</a></li>
+					<li><a href="#second">work</a></li>
+					<li><a href="#third">contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+</html>

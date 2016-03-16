@@ -1,0 +1,133 @@
+﻿
+#main4 /* Приоритет на селектора: 0 1 0 0 */
+{
+display: -webkit-flex;
+display: flex;
+    
+-webkit-flex-flow: row wrap;
+ flex-flow: row wrap;
+    
+-webkit-justify-content: center;
+justify-content: center;
+
+margin-top: 0;
+margin-left: 10%;
+margin-right: 10%;
+/*border: 1px solid blue;*/
+}
+
+#cont4 /* Приоритет на селектора: 0 1 0 0 */
+{
+color: #fff;
+font-weight: bold;
+font-family: Calibri, Helvetica, Verdana;
+font-size: 16px;
+/*border: 1px solid black;*/
+width: 100px;
+height: 100px;
+
+display: inline-block;
+
+margin:12px 12px;
+    
+transition: -webkit-transform 0.15s;
+transition: transform 0.15s;
+}
+
+a:link /* Приоритет на селектора: 0 0 1 1 */
+{
+text-decoration: none;
+}
+
+a:hover /* Приоритет на селектора: 0 0 1 1 */
+{
+color: #999;
+}
+
+#main4text  /* Приоритет на селектора: 0 1 0 0 */
+{
+display: -webkit-flex;
+display: flex;
+    
+-webkit-flex-flow: row wrap;
+flex-flow: row wrap;
+
+-webkit-justify-content: center;
+justify-content: center;
+
+margin-top: 10%;
+margin-left: 10%;
+margin-right: 10%;
+/*border: 1px solid red;*/
+}
+
+h1.thirdpagecont /* Приоритет на селектора: 0 0 1 1 */
+{
+text-align: center;
+color: #996666;
+width: 80%;
+}
+
+.thirdpagecontpara /* Приоритет на селектора: 0 0 1 0 */
+{
+text-align: center;
+color: #996666;
+width: 80%;
+}
+
+.anchordecor /* Приоритет на селектора: 0 0 1 0 */
+{
+font-weight: bold;
+}
+
+.textdecor /* Приоритет на селектора: 0 0 1 0 */
+{
+font-style: italic;
+}
+
+main4text#main4text p.thirdpagecontpara a.anchordecor  /* Приоритет на селектора: 0 1 2 3 */
+{
+color: #99cc66;
+}
+
+main4text#main4text p.thirdpagecontpara textcontainer1.anchordecor textcontainer2:nth-child(2).textdecor /* Приоритет на селектора: 0 1 4 4 */
+{
+color: #ff3366;
+}
+
+main4 > containerthird:hover /* Приоритет на селектора: 0 0 1 2 */
+{
+-webkit-transform: scale(1.1, 1.1);
+transform: scale(1.1, 1.1);
+}
+
+
+@media screen and (min-width: 800px ) {
+
+#main4 /* Приоритет на селектора: 0 1 0 0 */
+{
+width: 80%;
+/*border: 1px solid aqua;*/
+}
+
+#cont4 /* Приоритет на селектора: 0 1 0 0 */
+{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+containerthird:nth-child(3) /* Приоритет на селектора: 0 0 1 1 */
+{
+margin-bottom: 20%;
+}
+}
+
+@media screen and (min-width: 1220px) {
+
+#main4 /* Приоритет на селектора: 0 1 0 0 */
+{
+width: 80%;
+/*border: 1px solid green;*/
+}
+}
+
